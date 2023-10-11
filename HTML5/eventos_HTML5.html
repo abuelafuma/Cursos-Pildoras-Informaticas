@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Documento sin título</title>
+</head>
+	<script>
+		
+		var imagen = new Array(7); 
+
+		function	tipoFlor() {
+			alert("Pensamientos");
+		}
+	
+		function manejaFlor(){
+			// document.getElementsByTagName("img")[0].onclick=tipoFlor;
+			imagen = document.getElementsByTagName("img")[0];
+			//var imagen = document.getElementsByTagName("img")[0];
+			imagen.addEventListener("mouseover", crecer, false);
+			imagen.addEventListener("mouseout", menguar, false);
+			imagen.addEventListener("click", tipoFlor, false);// No ponemos "on"delante de click porque on solo se pone en sintaxis en linea.
+			// La imagen estará preparada para escuchar un evento de tipo click, que desencadenara el código, (no se entiende el false)
+			// Un mismo elemento desendacdene varios eventos.
+		}
+
+		function manejaFlor1() {
+			for(var i = 0; i < imagen.length; i++) {
+				imagen[i] = document.getElementsByTagName("img")[i];
+				
+			}
+			// Podemos substituir la llamada a la función del método por una fucnión anónima con esta sintasix. Usamos los metodos dentro del cuerpo de la función {metodos de width y hight de la imagen}
+			imagen[0].addEventListener("mouseover", function(){imagen[0].width=225; imagen[0].height=225;}, false); 
+			imagen[0].addEventListener("mouseout", function(){imagen[0].width=200; imagen[0].height=200;}, false);
+			imagen[0].addEventListener("click", tipoFlor, false);
+
+			imagen[1].addEventListener("mouseover", function(){imagen[1].width=225; imagen[1].height=225;}, false); 
+			imagen[1].addEventListener("mouseout", function(){imagen[1].width=200; imagen[1].height=200;}, false);
+			imagen[1].addEventListener("click", tipoFlor, false);
+
+			imagen[2].addEventListener("mouseover", function(){imagen[2].width=225; imagen[2].height=225;}, false); 
+			imagen[2].addEventListener("mouseout", function(){imagen[2].width=200; imagen[2].height=200;}, false);
+			imagen[2].addEventListener("click", tipoFlor, false);
+
+			imagen[3].addEventListener("mouseover", function(){imagen[3].width=225; imagen[3].height=225;}, false); 
+			imagen[3].addEventListener("mouseout", function(){imagen[3].width=200; imagen[3].height=200;}, false);
+			imagen[3].addEventListener("click", tipoFlor, false);
+
+			imagen[4].addEventListener("mouseover", function(){imagen[4].width=225; imagen[4].height=225;}, false); 
+			imagen[4].addEventListener("mouseout", function(){imagen[4].width=200; imagen[4].height=200;}, false);
+			imagen[4].addEventListener("click", tipoFlor, false);
+
+			imagen[5].addEventListener("mouseover", function(){imagen[5].width=225; imagen[5].height=225;}, false); 
+			imagen[5].addEventListener("mouseout", function(){imagen[5].width=200; imagen[5].height=200;}, false);
+			imagen[5].addEventListener("click", tipoFlor, false);
+
+			imagen[6].addEventListener("mouseover", function(){imagen[6].width=225; imagen[6].height=225;}, false); 
+			imagen[6].addEventListener("mouseout", function(){imagen[6].width=200; imagen[6].height=200;}, false);
+			imagen[6].addEventListener("click", tipoFlor, false);
+		}
+		/*
+		function crecer(){
+			
+			imagen.width=225;
+			imagen.height=225;
+			
+		}
+		
+		function menguar() {
+			
+			imagen.width=200;
+			imagen.height=200;
+			
+		}
+		*/
+	//window.onload=manejaFlor1;
+
+	window.addEventListener("load",manejaFlor1,false);
+	</script>
+
+<body>
+	<p><img src="imagenes/1.jpg" alt="flores desconocidas"></p>&nbsp
+	<p><img src="imagenes/2.jpg" alt="flores desconocidas"></p>&nbsp
+	<p><img src="imagenes/3.jpg" alt="flores desconocidas"></p>&nbsp
+	<p><img src="imagenes/4.jpg" alt="flores desconocidas"></p>&nbsp
+	<p><img src="imagenes/5.jpg" alt="flores desconocidas"></p>&nbsp
+	<p><img src="imagenes/6.jpg" alt="flores desconocidas"></p>&nbsp
+	<p><img src="imagenes/paisaje_nieve.jpg" alt="flores desconocidas"></p>&nbsp;
+</body>
+</html>

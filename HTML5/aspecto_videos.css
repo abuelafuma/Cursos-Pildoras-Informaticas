@@ -1,0 +1,36 @@
+#video { /* section */
+    width:720px;
+    margin: 20px auto;
+    background-color: orange;
+    padding: 5px;
+    border: 2px solid orangered;
+    border-radius: 10px;
+}
+
+nav {
+    margin: 5px 0;
+}
+
+#botones {
+	float: left;
+	width: 100px;
+	height: 20px;
+
+}
+
+#barra {
+	background-color: white;
+	width: 600px;
+	height: 16px;
+	border: 1px solid gray;
+	padding: 3px;
+	margin-left: 100px;
+
+}
+
+#progreso {
+	position: absolute;
+	width: 0px;
+	height: 16px;
+	background: rgba(0, 0, 150, 2);
+}

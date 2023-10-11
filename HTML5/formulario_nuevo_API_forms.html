@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+      table {
+        text-align: center;
+        background-color: #F96;
+        width: 25%;
+        margin: auto;
+        border: 2px #F96 dashed;
+      }
+
+      td {
+        padding: 15px;
+      }
+
+
+
+
+    </style>
+</head>
+<body>
+  <!-- Nuevo Elemento DATALIST -->
+  <!-- API forms: Libreria de objetos específicos y métodos propios 
+       -->
+  <section>
+    <form name="registro" method="get">
+
+      <datalist id="informacion">
+
+        <option value="123456" label="    telefono 1"></option>
+
+        <option value="789012" label="    telefono 2"></option>
+
+        <option value="345678" label="    telefono 3"></option>
+
+        <option value="901234" label="    telefono 4"></option>
+
+      </datalist>
+      Teléfono:&nbsp;<input type="tel" name="telefono" id="telefono" list="informacion">
+    </form>
+  </section>
+
+  <section>
+    <form name="registro_usario" method="get">
+
+      <table><tr><td>
+        Nombre:</td><td><input type="text" name="nombre" id="nombre"></td></tr>
+        <tr><td> 
+        Apellido:</td><td><input type="text" name="apellido" id="apellido"></td></tr>
+        <tr><td>
+        Edad:</td><td><input type="text" name="edad" id="edad" min="1" max="100"></td></tr>
+        <tr><td>
+        <input type="submit" name="enviar" id="enviar" value="Registrar"></td></tr>
+      </table>
+
+    </form>
+  </section>
+</body>
+</html>

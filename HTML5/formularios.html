@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <section class="formulario">
+    <!-- AUTOCOMPLETE: Los formularios activan la funcion de autocomplete por defecto (Lo guarda en memoria)-->
+    <form name="miFormulario" id="miFormulario" action="" method="get" autocomplete="on"> 
+      <!-- NOVALIDATE: Valor boobleano que no valide el formulario, si no está lo valida (comprueba)-->
+      <!--
+      Nombre:&nbsp;<input type="text" name="Texto" id="Texto"><br><br><br>
+
+      Email:&nbsp;<input type="email" name="email" id="email"><br><br><br>
+
+      Buscar:&nbsp;<input type="search" name="buscar" id="buscar"><br><br><br>
+
+      Url:&nbsp;<input type="url" name="url" id="url" required><br><br><br>
+      -->
+      Edad:&nbsp;<input type="number" name="edad" id="edad"  step="5" placeholder="Multiplos de 5"><br><br>
+
+      Edad:&nbsp;<input type="range" name="edad1" id="edad1" min="5" max="105" step="5" placeholder="Multiplos de 5"><br><br>
+
+      Email:&nbsp;<input type="email" name="email" id="email" required multiple autofocus><br><br><br>
+      <!-- atributo MULTIPLE: Enviar mas de un email -->
+      <!-- atributo AUTOFOCUS: En que campo queremos que aparezca el cursor -->
+
+      <!-- atributo PATTERN: Validaciones especiales con patrones definidos (CP) -->
+      C.postal:&nbsp;<input pattern="[0-9]{5}" name="cpostal" id="cpostal" placeholder="debe tener 5 dígitos"><br><br>
+
+      <input type="submit" value="Enviar">
+
+      Fecha:&nbsp;<input type="date" name="fecha" id="fecha"><br><br>
+      
+      Mes:&nbsp;<input type="month" name="mes" id="mes"><br><br>
+
+      Semana:&nbsp;<input type="week" name="semana" id="semana"><br><br>
+      
+      Dias:&nbsp;<input type="week" name="dias" id="dias"><br><br>
+      
+      Time:&nbsp;<input type="time" name="horas" id="horas"><br><br>
+
+      UTC:&nbsp;<input type="datetime-local" name="utc" id="utc"><br><br>
+  
+      <input type="submit" value="Enviar">
+  
+    </form>
+    
+  </section>
+  <!-- Atributo FORM
+    Así, No se envia con el formulario faltaria el atributo form que permite enviar el un elemento fuera del formulario-->
+  <img src="images/1.jpg" width="200" height="200">
+  Nombre:&nbsp;<input type="text" name="nombre"  id="nombre">
+
+  <!-- Así, SI se envia con el formulario -->
+  NombreEnviado:&nbsp;<input type="text" name="nombreEnviado"  id="nombreEnviado" form="miFormulario">
+  
+</body>
+</html>
